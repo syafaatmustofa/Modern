@@ -56,7 +56,8 @@ class BukuController extends Controller
      */
     public function show(buku $buku)
     {
-        //
+        //tampil detail
+        return view('detailberanda',compact('buku'));
     }
 
     /**

@@ -22,19 +22,21 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// beranda
 Route::get('/', [BerandaController::class, 'index']);
 
 Auth::routes();
-
+// middleware admin
 Route::middleware(['auth', 'admin'])->group(function () {
-    
+    // route admin
     Route::resource('kategori', KategoriController::class);
     Route::get('deletekategori/{kategori}', [KategoriController::class, 'destroy'])->name('deletekategori');
     
 });
 
+// middleware editor
 Route::middleware(['auth', 'editor'])->group(function () {
-    
+    // route buku
     Route::resource('buku', BukuController::class);
     Route::get('deletebuku/{buku}', [BukuController::class, 'destroy'])->name('deletebuku');
 });

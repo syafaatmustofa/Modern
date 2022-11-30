@@ -32,7 +32,13 @@
                             <img src="{{ asset('storage/'.$item->cover) }}" alt="" width="100px">
                         </td>
                         <td>{{ $item->kategori->nama }}</td>
-                        <td>{{ $item->tampil }}</td>
+                        <td>
+                            @if($item->tampil == 1)
+                                <span class="text-primary fw-semibold">Tampilkan</span>
+                                @else
+                                <span class="text-danger fw-semibold">Tidak Ditampilkan</span>
+                            @endif
+                        </td>
                         <td >
                             <a href="{{ route('buku.edit', $item->id) }}" class="btn btn-primary">edit</a>
                             <a href="{{ route('deletebuku',$item->id) }}" class="btn btn-danger">delete</a>

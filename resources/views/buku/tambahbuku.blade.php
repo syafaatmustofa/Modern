@@ -11,7 +11,7 @@
         <input type="text" class="form-control" name="judul" placeholder="Masukkan judul">
     </div>
     <div class="mb-3">
-        <textarea name="sinopsis" id="idform" cols="30" rows="10" placeholder="Masukkan Sinopsis"></textarea>
+        <textarea class="form-control" name="sinopsis" id="idform" cols="30" rows="10" placeholder="Masukkan Sinopsis"></textarea>
         {{-- <input type="text" class="form-control" name="sinopsis" placeholder="Masukkan sinopsis"> --}}
     </div>
     <div class="mb-3">

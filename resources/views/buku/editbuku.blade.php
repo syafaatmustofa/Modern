@@ -17,7 +17,7 @@
                     <input type="text" class="form-control" name="judul" value="{{ $buku->judul }}">
                 </div>
                 <div class="mb-3">
-                    <textarea name="sinopsis" id="formid" cols="30" rows="10">{{ $buku->sinopsis }}</textarea>
+                    <textarea class="form-control" name="sinopsis" id="formid" cols="30" rows="10">{{ $buku->sinopsis }}</textarea>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Penerbit</label>
